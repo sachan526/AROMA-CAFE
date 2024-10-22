@@ -1,0 +1,125 @@
+@use 'mixin' as m;
+
+#about {
+    padding-bottom: 168px;
+    background-color: #f9f9f9;
+    padding-inline:4%;
+    @include m.tab{
+        padding-bottom:80px;
+    }
+    
+
+    .about {
+        position: relative;
+
+        .about_text {
+            border-left: 10px solid #443535;
+            padding-block: 20px;
+            padding-left: 40px;
+            @include m.tab{
+                width:100%;
+                border:none;
+                padding-block:0;
+                padding-left:0;
+            }
+
+            h3 {
+                font-size: 20px;
+                padding-bottom: 24px;
+            }
+        }
+        .beans_text{
+            @include m.tab{
+                padding-bottom:40px;
+            }
+        }
+        .about_content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            @include m.tab{
+                flex-direction: column;
+                text-align: left;
+            }
+        }
+
+        .beans {
+            max-width: 358px;
+            filter: drop-shadow(0px 3px 7px rgba(83, 83, 83, 0.6));
+            @include m.tab{
+                max-width:100%;
+            }
+        }
+
+        .evening {
+            max-width: 240px;
+            position: absolute;
+            top: 629px;
+            left: 241px;
+            display: block;
+            margin-inline: auto;
+            filter: drop-shadow(0px 3px 7px rgba(83, 83, 83, 0.6));
+            z-index: 10;
+            @include m.tab{
+                position: static;
+                max-width:100%;
+            }
+        }
+
+        .morning_text {
+            padding-top: 200px;
+            align-items: end;
+            @include m.tab{
+                padding-top:40px;
+            }
+        }
+
+        .morning {
+            max-width: 368px;
+            filter: drop-shadow(0px 3px 7px rgba(83, 83, 83, 0.6));
+            @include m.tab{
+                max-width:100%;
+            }
+        }
+
+
+
+        .bean {
+            width: 35px;
+            position: absolute;
+            @include m.tab{
+                display:none;
+            }
+        }
+
+        .bean1 {
+            top: 10%;
+            right: 0%;
+            transform: rotate(-50deg);
+        }
+
+        .bean2 {
+            top: 25%;
+            right: -24%;
+            transform: rotate(6deg);
+        }
+
+        .bean3 {
+            bottom: -13%;
+            left: -6%;
+            transform: rotate(-30deg);
+        }
+
+        .bean4 {
+            bottom: -4%;
+            left: -17%;
+            transform: rotate(11deg);
+        }
+
+        .bean5 {
+            top: 13%;
+            right: -12%;
+            transform: rotate(11deg);
+        }
+    }
+}

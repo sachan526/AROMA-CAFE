@@ -1,0 +1,154 @@
+@use 'mixin' as m;
+#mv {
+    height: 100vh;
+    width: 100%;
+    background-image: url(../image/mv.png);
+    position: relative;
+    overflow: visible;
+
+    .mv_box {
+        height: 70%;
+        width: 100%;
+        background-color: rgba(253, 252, 252, 0.9);
+        position: relative;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        nav {
+            ul {
+                display: flex;
+                justify-content: flex-end;
+                gap: 32px;
+                margin-top: 20px;
+                margin-right: 40px;
+
+                li {
+                    text-align: center;
+
+                    a {
+                        color: #443535;
+                        transition: all .5s;
+
+                        &:hover {
+                            color: #888181;
+                        }
+
+                        span {
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .header_logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+
+            img {
+                width: 300px;
+                @include m.sp{
+                    width: 200px;
+                }
+            }
+
+            .store_name {
+                font-size: 2rem;
+                font-weight: bold;
+                color: #524343;
+                padding-top: 20px;
+                @include m.sp{
+                    font-size: 1.5rem;
+                }
+
+                span {
+                    font-size: 1rem;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .sns {
+            position: absolute;
+            bottom: 20px;
+            left: 40px;
+
+            .fa-brands {
+                font-size: 2rem;
+                color: #443535;
+                padding-inline: 5px;
+                transition: all .5s;
+
+                &:hover {
+                    color: #888181;
+                }
+            }
+        }
+    }
+
+    .scroll {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #F9F9F9;
+        overflow: visible;
+
+
+        &::before {
+            content: "";
+            width: 1px;
+            height: 50px;
+            background-color: #F9F9F9;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &::after {
+            content: "";
+            width: 1px;
+            height: 50px;
+            background-color: #443535;
+            position: absolute;
+            bottom: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    .tel {
+        display: block;
+        width: 376px;
+        padding-block: 16px;
+        text-align: center;
+        font-size: 1rem;
+        color: #F9F9F9;
+        background-color: #35443E;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        border-radius: 10px 0 0 0;
+        transition: all 0.5s;
+        z-index: 500;
+
+        span {
+            font-size: 1.5rem;
+        }
+
+        &:hover {
+            background-color: #526960;
+        }
+        @include m.sp {
+            width: 100%;
+            border-radius: 0;
+
+        }
+    }
+}

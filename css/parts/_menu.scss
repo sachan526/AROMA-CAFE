@@ -1,0 +1,71 @@
+@use'mixin' as m;
+#menu {
+    background-color: #ddd9da;
+    padding-bottom: 168px;
+    @include m.tab{
+        padding-bottom:80px;
+    }
+
+    .menu {
+        .coffee {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .top_page_menu_text{
+                @include m.tab{
+                    display: none;
+                }
+            }
+
+            .coffee_cup {
+                text-align: center;
+
+                img {
+                    width:70%;
+                    object-fit: contain;
+                    filter: drop-shadow(0px 3px 7px rgba(83, 83, 83, 0.6));
+                }
+
+                p {
+                    padding-top: 32px;
+
+                    span {
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+
+        .more_btn {
+            position: relative;
+            border-bottom: 1px solid #222222;
+            max-width: 150px;
+            margin-inline: auto;
+            padding-top: 112px;
+            transition: all .5s;
+
+            &::before {
+                content: "";
+                display: block;
+                width: 30px;
+                height: 1px;
+                background-color: #222222;
+                rotate: 40deg;
+                position: absolute;
+                right: -3px;
+                bottom: 9px;
+            }
+
+            &:hover {
+                max-width: 175px;
+                color: #443535;
+                font-weight: bold;
+            }
+
+            a {
+                color: #222222;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
